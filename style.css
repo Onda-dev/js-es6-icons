@@ -3,3 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.container {
+    padding: 20px;
+    margin: auto;
+    font-size: 4em;
+    display: flex;
+    gap: 100px;
+    flex-wrap: wrap;
+}
