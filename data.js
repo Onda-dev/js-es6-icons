@@ -1,4 +1,4 @@
-const icons = [
+let icons = [
 	{
 		name: 'cat',
 		prefix: 'fa-',
@@ -119,16 +119,6 @@ const icons = [
 // Milestone 2
 // Ciascuna icona ha una proprietà "color": utilizzare questa proprietà per visualizzare le icone del colore corrispondente.
 
-icons.forEach((element) => {
-	let icon = `<i class="${element.prefix}solid ${element.prefix}${element.name} ${element.color}"></i>`
-	// console.log(icon)
-	const iconHTML = document.querySelector("#icon-template").content.cloneNode(true)
-	iconHTML.querySelector(".icon").innerHTML = icon
-	iconHTML.querySelector(".icon-name").innerHTML = element.name
-	console.log(iconHTML)
-	document.querySelector(".container").append(iconHTML)
-})
-
 // Milestone 3
 // Aggiungere alla pagina una select in cui le options corrispondono ai vari tipi di icone (animal, vegetable, user). Quando l'utente seleziona un tipo dalla select, visualizzare solamente le icone corrispondenti.
 
@@ -136,7 +126,25 @@ const selectType = document.querySelector("#type")
 
 selectType.addEventListener('change', (event) => {
 	console.log(event.target.value)
+	icons = icons.filter((elm) => elm.type === event.target.value)
+	console.log
+
+	show ()
 })
+
+function show () {
+icons.forEach((element) => {
+	let icon = `<i class="${element.prefix}solid ${element.prefix}${element.name} ${element.color}"></i>`
+	// console.log(icon)
+	const iconHTML = document.querySelector("#icon-template").content.cloneNode(true)
+	iconHTML.querySelector(".icon").innerHTML = icon
+	iconHTML.querySelector(".icon-name").innerHTML = element.name
+	// console.log(iconHTML)
+	document.querySelector(".container").append(iconHTML)
+})
+}
+
+
 
 
 
