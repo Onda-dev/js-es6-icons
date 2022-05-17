@@ -11,14 +11,26 @@
         <script src="https://kit.fontawesome.com/d1d3e8df9b.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div class="container">
-            <template id="icon-template">
-                <div class="icon-box">
-                    <div class="icon"></div>
-                    <div class="icon-name"></div>
-                </div>
-            </template>
-        </div>
+        <section class="header">
+            <div class="header">
+                <label for="type">Filtra per tipo:</label>
+                <select name="type" id="type">
+                <option value="animal">Animali</option>
+                <option value="vegetable">Vegetali</option>
+                <option value="user">Utenti</option>
+                </select>
+            </div>
+        </section>
+        <section class="main">
+            <div class="container">
+                <template id="icon-template">
+                    <div class="icon-box">
+                        <div class="icon"></div>
+                        <div class="icon-name"></div>
+                    </div>
+                </template>
+            </div>
+        </section>
         <script src="data.js"></script>
     </body>
 </html>
