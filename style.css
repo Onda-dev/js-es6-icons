@@ -7,8 +7,17 @@
 .container {
     padding: 20px;
     margin: auto;
-    font-size: 4em;
+    font-size: 2em;
     display: flex;
     gap: 100px;
     flex-wrap: wrap;
+}
+
+.icon-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: pink;
+    padding: 40px;
+    border-radius: 20px;
 }

@@ -125,6 +125,7 @@ icons.forEach((element) => {
 	// console.log(icon)
 	const iconHTML = document.querySelector("#icon-template").content.cloneNode(true)
 	iconHTML.querySelector(".icon").innerHTML = icon
+	iconHTML.querySelector(".icon-name").innerHTML = element.name
 	console.log(iconHTML)
 	document.querySelector(".container").append(iconHTML)
 })
