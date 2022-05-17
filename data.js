@@ -133,15 +133,15 @@ selectType.addEventListener('change', (event) => {
 })
 
 function show () {
-icons.forEach((element) => {
-	let icon = `<i class="${element.prefix}solid ${element.prefix}${element.name} ${element.color}"></i>`
-	// console.log(icon)
-	const iconHTML = document.querySelector("#icon-template").content.cloneNode(true)
-	iconHTML.querySelector(".icon").innerHTML = icon
-	iconHTML.querySelector(".icon-name").innerHTML = element.name
-	// console.log(iconHTML)
-	document.querySelector(".container").append(iconHTML)
-})
+	icons.forEach((element) => {
+		let icon = `<i class="${element.prefix}solid ${element.prefix}${element.name} ${element.color}"></i>`
+		// console.log(icon)
+		const iconHTML = document.querySelector("#icon-template").content.cloneNode(true)
+		iconHTML.querySelector(".icon").innerHTML = icon
+		iconHTML.querySelector(".icon-name").innerHTML = element.name
+		// console.log(iconHTML)
+		document.querySelector(".container").append(iconHTML)
+	})
 }
 
 
